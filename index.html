@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Al Ihsan Non-Profit</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="top-header">
+        <div class="social-links">
+            <a href="https://www.youtube.com/@alihsancharity" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/alihsancharity" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/alihsancharity" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/alihsancharity" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="search-contact">
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-input">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:eri.ihsan6@gmail.com" class="contact-link"><i class="fas fa-envelope"></i>eri.ihsan6@gmail.com</a>
+                <a href="tel:6479147814" class="contact-link"><i class="fas fa-phone"></i> (647) 914-7814</a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="logos/Al Ihsan.png" alt="Al Ihsan Logo" class="logo">
+            </div>
+            <div class="header-text">
+                <h1>Al Ihsan Non-Profit Charitable Organization</h1>
+                <p>Building a Better Future Together</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo-mobile">
+                <img src="logos/Al Ihsan.png" alt="Al Ihsan Logo" class="logo">
+            </div>
+            <button class="hamburger" aria-label="Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" class="nav-link" onclick="showSection('programs')">Programs</a></li>
+                <li><a href="#" class="nav-link" onclick="showSection('about')">About</a></li>
+                <li><a href="#" class="nav-link" onclick="showSection('ways-to-give')">Ways to Give</a></li>
+                <li><a href="#" class="nav-link" onclick="showSection('events')">Events</a></li>
+                <li><a href="#" class="nav-link" onclick="showSection('supporters')">Supporters</a></li>
+                <li><a href="#" class="nav-link" onclick="showSection('contact')">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about" style="display: none;">
+        <h2>About Our Mission</h2>
+        <p>Who We Are
+            We are Eritrean Muslims—members of Al Ihsan, a growing non-profit organization with 50+ dedicated members and decades of combined experience in business and charitable work.
+            
+            We've pledged to support Eritreans worldwide—offering help in difficult times and coming together to celebrate joyful occasions like weddings. Our mission is to uplift, connect, and empower our community as one united family.
+            
+            Our community has proudly supported the Daleel Islamic Organization in establishing the first Eritrean mosque in Toronto, Canada. Together, we're building a stronger future—rooted in unity, service, and faith.
+        </p>
+
+        <div class="impact-stats">
+            <h3>Our Impact</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Students Supported</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Families Assisted</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Community Events</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4+</div>
+                    <div class="stat-label">Emergency Cases</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="display: none;">
+        <h2>Contact Us</h2>
+        <div class="contact-details">
+            <p><i class="fas fa-envelope"></i> Email: eri.ihsan6@gmail.com</p>
+            <p><i class="fas fa-phone"></i> Phone: (647) 914-7814</p>
+        </div>
+    </section>
+
+    <section id="events" style="display: none;">
+        <h2>Upcoming Events</h2>
+        <div class="events-container">
+            <div class="event-card">
+                <h3>Summer Community Barbecue</h3>
+                <div class="event-details">
+                    <p><i class="fas fa-calendar"></i> Summer 2024</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Various Parks in Toronto</p>
+                    <p>Join us for our annual summer community barbecues! We're organizing two special events in different parks across Toronto. These gatherings are a great opportunity to connect with fellow community members, enjoy delicious food, and create lasting memories.</p>
+                </div>
+                <div class="event-photos">
+                    <img src="photos/invent photos/2.jpg" alt="Community Gathering" class="event-photo">
+                    <img src="photos/invent photos/1.jpg" alt="Community Center" class="event-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="donate-section">
+        <h3>Make a Difference Today</h3>
+        <button class="button" onclick="showDonationModal()">Donate Now</button>
+    </div>
+
+    <div id="donationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="hideModal()">&times;</span>
+            <h3>Make a Donation</h3>
+            <form id="donationForm" onsubmit="processDonation(event)">
+                <div class="form-group">
+                    <label for="donationAmount">Donation Amount ($)</label>
+                    <div class="amount-options">
+                        <button type="button" class="amount-btn" onclick="setAmount(50)">$50</button>
+                        <button type="button" class="amount-btn" onclick="setAmount(100)">$100</button>
+                        <button type="button" class="amount-btn" onclick="setAmount(500)">$500</button>
+                        <input type="number" id="donationAmount" name="amount" placeholder="Other Amount" min="1" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="paymentMethod">Payment Method</label>
+                    <select id="paymentMethod" name="paymentMethod" required>
+                        <option value="">Select Payment Method</option>
+                        <option value="credit">Credit Card</option>
+                        <option value="debit">Debit Card</option>
+                        <option value="etransfer">E-Transfer</option>
+                    </select>
+                </div>
+
+                <div id="creditCardFields" style="display: none;">
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date</label>
+                            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="123">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message (Optional)</label>
+                    <textarea id="message" name="message" rows="3" placeholder="Add a message with your donation"></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="button">Donate Now</button>
+                    <button type="button" class="button" onclick="hideModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section id="home">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h2>Our Mission</h2>
+                <p class="mission-statement">We support Eritreans around the world—offering help in hard times and celebrating together in joyful moments like weddings. We're here to uplift, connect, and empower our community as one united family.</p>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat-card">
+                <div class="stat-number" id="travelCount">0</div>
+                <div class="stat-label">Travel Expenses Covered</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="communityCount">0</div>
+                <div class="stat-label">Community Members Supported</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="emergencyCount">0</div>
+                <div class="stat-label">Emergency Cases Assisted</div>
+            </div>
+        </div>
+
+        <div class="welcome-section">
+            <h2>Welcome to Our Community</h2>
+            <p>Join us in making a difference!</p>
+            <button class="button" onclick="showDonationModal()">Donate Now</button>
+            <button class="button" onclick="showVolunteerForm()">Become a Volunteer</button>
+        </div>
+    </section>
+
+    <div id="volunteerModal" class="modal">
+        <h3>Become a Volunteer</h3>
+        <form id="volunteerForm" onsubmit="submitVolunteerForm(event)">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="availability">Availability</label>
+                <select id="availability" name="availability" required>
+                    <option value="">Select your availability</option>
+                    <option value="weekdays">Weekdays</option>
+                    <option value="weekends">Weekends</option>
+                    <option value="both">Both Weekdays and Weekends</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="interests">Areas of Interest</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="interests" value="events"> Event Organization</label>
+                    <label><input type="checkbox" name="interests" value="fundraising"> Fundraising</label>
+                    <label><input type="checkbox" name="interests" value="outreach"> Community Outreach</label>
+                    <label><input type="checkbox" name="interests" value="admin"> Administrative Support</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">Why do you want to volunteer with us?</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <div class="form-buttons">
+                <button type="submit" class="button">Submit</button>
+                <button type="button" class="button" onclick="hideVolunteerModal()">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <section id="programs" style="display: none;">
+        <div class="programs-hero">
+            <h2>Our Programs</h2>
+            <p>Discover how we're making a difference in our community through various initiatives and programs.</p>
+        </div>
+
+        <div class="program-grid">
+            <div class="program-card">
+                <div class="program-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Education Support</h3>
+                <p>Coming soon! We are planning to provide scholarships, tutoring, and educational resources to help students succeed academically. This program is part of our vision for the future.</p>
+                <a href="program-details.html?program=education" class="button">Learn More</a>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3>Healthcare Assistance</h3>
+                <p>Supporting community members with medical expenses and access to healthcare services.</p>
+                <a href="program-details.html?program=healthcare" class="button">Learn More</a>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Housing Support</h3>
+                <p>Helping families find and maintain stable housing through financial assistance and resources.</p>
+                <a href="program-details.html?program=housing" class="button">Learn More</a>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Food Security</h3>
+                <p>Providing food assistance and nutrition education to ensure no one goes hungry.</p>
+                <a href="program-details.html?program=food" class="button">Learn More</a>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3>Community Outreach</h3>
+                <p>Engaging with the community through events, workshops, and support services.</p>
+                <a href="program-details.html?program=outreach" class="button">Learn More</a>
+            </div>
+
+            <div class="program-card">
+                <div class="program-icon">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <h3>Emergency Relief</h3>
+                <p>Providing immediate assistance to those facing unexpected crises and emergencies.</p>
+                <a href="program-details.html?program=emergency" class="button">Learn More</a>
+            </div>
+        </div>
+
+        <div class="program-stats">
+            <h2>Our Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Students Supported</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Families Assisted</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Community Events</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Emergency Cases</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="get-involved">
+            <h2>Get Involved</h2>
+            <p>Join us in making a difference in our community. There are many ways to get involved:</p>
+            <div class="involvement-options">
+                <button class="button" onclick="showVolunteerForm()">Become a Volunteer</button>
+                <button class="button" onclick="showDonationModal()">Make a Donation</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="supporters" style="display: none;">
+        <h2>Our Supporters</h2>
+        <div class="supporters-content">
+            <div class="supporters-intro">
+                <p>At Al Ihsan, our greatest strength comes from our dedicated members who form the backbone of our organization. Each member contributes their time, resources, and expertise to make a difference in our community.</p>
+            </div>
+            
+            <div class="supporters-stats">
+                <div class="supporter-stat">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Active Members</div>
+                </div>
+                <div class="supporter-stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Volunteer-Based</div>
+                </div>
+                <div class="supporter-stat">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Community Support</div>
+                </div>
+            </div>
+
+            <h2 class="testimonials-title">Testimonials</h2>
+            <div class="member-quote">
+                <blockquote>
+                    "Being a member of Al Ihsan means being part of a family that's committed to making a positive impact in our community. Together, we're stronger."
+                </blockquote>
+                <p class="quote-author">- Al Ihsan Member</p>
+            </div>
+
+            <div class="member-quote">
+                <blockquote>
+                    "The support I received from Al Ihsan during a difficult time in my life was incredible. Their dedication to helping community members is truly inspiring."
+                </blockquote>
+                <p class="quote-author">- Sarah M., Community Member</p>
+            </div>
+
+            <div class="member-quote">
+                <blockquote>
+                    "As a volunteer with Al Ihsan, I've witnessed firsthand how this organization brings people together and creates meaningful change in our community."
+                </blockquote>
+                <p class="quote-author">- Ahmed K., Volunteer</p>
+            </div>
+
+            <div class="member-quote">
+                <blockquote>
+                    "The educational support program helped my children excel in their studies. I'm grateful for Al Ihsan's commitment to our community's future."
+                </blockquote>
+                <p class="quote-author">- Fatima H., Parent</p>
+            </div>
+
+            <div class="member-quote">
+                <blockquote>
+                    "Al Ihsan's emergency relief efforts have been a lifeline for many families. Their quick response and genuine care make all the difference."
+                </blockquote>
+                <p class="quote-author">- Mohammed A., Community Leader</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Ihsan Non-Profit Community. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
